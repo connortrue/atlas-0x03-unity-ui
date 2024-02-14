@@ -1,9 +1,11 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody player;
+    public Text scoreText;
 
     public float move = 5000f;
     public int score = 0;
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour
             score = 0;
             SceneManager.LoadScene("maze");
         }
+
+        SetScoreText();
     }
 
     void FixedUpdate()
@@ -44,7 +48,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Pickup"))
         {
             score+=100;
-            Debug.Log("Score: " + score);
+            //Debug.Log("Score: " + score);
             Destroy(other.gameObject);
         }
         if (other.CompareTag("Trap"))
@@ -56,5 +60,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("You win!");
         }
+    }
+
+    void SetScoreText()
+    {
+        scoreText.text = score.ToString();
     }
 }
