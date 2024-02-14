@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,13 +19,26 @@ public class PlayerController : MonoBehaviour
     {
         if (health == 0)
         {
+            WinLoseText.text = "Game Over!";
+            WinLoseText.color = Color.white;
+            WinLoseBG.color = Color.red;
+            WinLoseBG.gameObject.SetActive(true);
+
+
             health = 5;
             score = 0;
-            SceneManager.LoadScene("maze");
+
+            StartCoroutine(ReloadSceneAfterDelay(3));
         }
 
         SetScoreText();
         SetHealthText();
+    }
+
+    IEnumerator ReloadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("maze");
     }
 
     void FixedUpdate()
