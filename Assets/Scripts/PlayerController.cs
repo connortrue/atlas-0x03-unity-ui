@@ -28,14 +28,14 @@ public class PlayerController : MonoBehaviour
             health = 5;
             score = 0;
 
-            StartCoroutine(ReloadSceneAfterDelay(3));
+            StartCoroutine(LoadScene(3));
         }
 
         SetScoreText();
         SetHealthText();
     }
 
-    IEnumerator ReloadSceneAfterDelay(float delay)
+    IEnumerator LoadScene(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("maze");
