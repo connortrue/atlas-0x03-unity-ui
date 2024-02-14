@@ -7324,6 +7324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098642439}
+  - component: {fileID: 1098642440}
   m_Layer: 0
   m_Name: Traps
   m_TagString: Trap
@@ -7354,6 +7355,21 @@ Transform:
   - {fileID: 370044188}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098642440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098642438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f47580e3b13dac2a89d537652eef20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapMat: {fileID: 0}
+  goalMat: {fileID: 0}
+  colorblindMode: {fileID: 0}
 --- !u!4 &1106757692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4572020415771295742, guid: 0d3ac4b4608349b459cf79b0604ff4fe,
