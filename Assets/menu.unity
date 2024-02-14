@@ -437,6 +437,8 @@ GameObject:
   - component: {fileID: 835821906}
   - component: {fileID: 835821905}
   - component: {fileID: 835821904}
+  - component: {fileID: 835821907}
+  - component: {fileID: 835821908}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -507,7 +509,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 835821905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 835821907}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayMaze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &835821905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +560,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835821902}
   m_CullTransparentMesh: 1
+--- !u!114 &835821907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835821902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f47580e3b13dac2a89d537652eef20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &835821908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835821902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4bacc31cf417c4aba2957390e03a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  scoreText: {fileID: 0}
+  healthText: {fileID: 0}
+  WinLoseText: {fileID: 0}
+  WinLoseBG: {fileID: 0}
+  move: 5000
+  score: 0
+  health: 5
 --- !u!1 &1145973742
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +604,7 @@ GameObject:
   - component: {fileID: 1145973746}
   - component: {fileID: 1145973745}
   - component: {fileID: 1145973744}
+  - component: {fileID: 1145973747}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -667,6 +714,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145973742}
   m_CullTransparentMesh: 1
+--- !u!114 &1145973747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145973742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f47580e3b13dac2a89d537652eef20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1215892234
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Options
 --- !u!222 &1215892237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -758,6 +817,7 @@ GameObject:
   - component: {fileID: 1270063139}
   - component: {fileID: 1270063138}
   - component: {fileID: 1270063137}
+  - component: {fileID: 1270063140}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -828,7 +888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1270063138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1270063140}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: QuitMaze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1270063138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +939,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270063135}
   m_CullTransparentMesh: 1
+--- !u!114 &1270063140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270063135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f47580e3b13dac2a89d537652eef20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433408095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Play
 --- !u!222 &1731483378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1092,7 +1176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Quit
 --- !u!222 &1740147751
 CanvasRenderer:
   m_ObjectHideFlags: 0
