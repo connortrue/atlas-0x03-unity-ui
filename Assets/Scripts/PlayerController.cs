@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             WinLoseText.text = "You Win!";
             WinLoseText.color = Color.black;
             WinLoseBG.color = Color.green;
-
+            WinLoseBG.gameObject.SetActive(true);
         }
     }
 
