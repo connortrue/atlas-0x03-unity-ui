@@ -4981,7 +4981,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 667040738}
   scoreText: {fileID: 1436317492}
-  healthText: {fileID: 0}
+  healthText: {fileID: 1088339097}
+  WinLoseText: {fileID: 995151920}
+  WinLoseBG: {fileID: 1002163352}
   move: 1000
   score: 0
   health: 5
@@ -6943,7 +6945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &995151921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7288,7 +7290,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088339095}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af4bacc31cf417c4aba2957390e03a73, type: 3}
   m_Name: 
@@ -7296,6 +7298,8 @@ MonoBehaviour:
   player: {fileID: 0}
   scoreText: {fileID: 1436317492}
   healthText: {fileID: 1088339097}
+  WinLoseText: {fileID: 0}
+  WinLoseBG: {fileID: 0}
   move: 5000
   score: 0
   health: 5
@@ -9202,7 +9206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436317490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af4bacc31cf417c4aba2957390e03a73, type: 3}
   m_Name: 
@@ -9210,6 +9214,8 @@ MonoBehaviour:
   player: {fileID: 0}
   scoreText: {fileID: 1436317492}
   healthText: {fileID: 0}
+  WinLoseText: {fileID: 0}
+  WinLoseBG: {fileID: 0}
   move: 5000
   score: 0
   health: 5

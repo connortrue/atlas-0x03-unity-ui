@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody player;
     public Text scoreText;
     public Text healthText;
+    public Text WinLoseText;
+    public Image WinLoseBG;
 
     public float move = 5000f;
     public int score = 0;
@@ -61,7 +63,11 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("Goal"))
         {
-            Debug.Log("You win!");
+            //Debug.Log("You win!");
+            WinLoseText.text = "You Win!";
+            WinLoseText.color = Color.black;
+            WinLoseBG.color = Color.green;
+
         }
     }
 
