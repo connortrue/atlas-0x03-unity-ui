@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(LoadScene(3));
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
+
         SetScoreText();
         SetHealthText();
     }
